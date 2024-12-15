@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>himia</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: #221415;
+}
+ 
+.gallery img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+}
+
+      body {
+        background: radial-gradient(circle, #3d2325, #5c4141);
+      }
+      .rounded-g {
+        width: 90%;
+        width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.6);
+        padding: 0.6em;
+        margin-bottom: 1em;
+      }
+      .rounded-imgg {
+        width: 90%;
+        width: 360px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.6);
+        padding: 0.6em;
+        margin-bottom: 1em;
+      }
+      .rounded-imm {
+        width: 60%;
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.6);
+        padding: 0.6em;
+        margin-bottom: 1em;
+      }
+      .navbar-custom {
+        background-color: rgb(39, 18, 18);
+      }
+      .navbar-nav a {
+        color: #f6ead5 !important;
+      }
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        font-size: 24px;
+        color: antiquewhite;
+        background: #3d2325;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .back-to-top:hover {
+        background: #3d2325;
+        text-decoration: none;
+      }
+      .elem {
+        border-radius: 20px;
+        width: 300px;
+        height: 100px;
+        background-color: #e4f1ed;
+      }
+      .text-block {
+        margin-left: 20px !important;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='antiquewhite' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      .navbar-toggler {
+        border: 2px solid #f6ead5;
+      }
+      .header__menu_list {
+  display: flex;
+  /*column-gap: 32px;*/
+  font-size: 18px;
+  list-style-type: circle;
+}
+
+.header__menu_list__first_li {
+  display: block; /* уберет маркер */
+    }
+details > summary {
+        padding: 5px;
+        background-color: #573235;
+        color: #f6ead5;
+        border: 2px #221415 solid;
+        cursor: pointer;
+        border-radius: 8px;
+        
+
+    }
+    summary:focus { 
+      outline: none; }
+    details > div {
+        border: 1px #4e3a3a solid;
+        padding: 10px;
+
+    }
+    details[open] > summary {
+        color:#573235; 
+        background-color: #3f2225;
+    }
+    details {
+  background: #3f2225;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding-left:  3px;
+  overflow:hidden;
+  transition: min-height .15s linear, max-height .5s linear;
+  -webkit-transition: min-height .15s linear, max-height .15s linear;
+
+    }
+    </style>
+  </head>
+  <body>
+    <a href="#top" id="back-to-top" class="back-to-top" title="Back to top"
+      >▲</a
+    >
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-nav">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="источники.html" face="Comic Sans"
+                >Источники</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container text-center my-5">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <img class="rounded-imm" src="mendeleev_0.jpg" alt="bogdon" />
+          <h1
+            class="fw-dark"
+            style="color: #f6ead5"
+            style="font-weight: bold"
+            face="Comic Sans"
+          >
+          Дмитрий Иванович Менделеев
+          </h1>
+          <p
+            style="background: linear-gradient(to bottom, #3d2325, #573235)"
+            class="lead text-muted"
+          >
+            <font
+              color="#F6EAD5"
+              face="Comic Sans"
+              size="5"
+              style="font-style: italic"
+              >Российский химик,
+              учёный-энциклопедист, педагог и общественный деятель. (1834–1907)
+            </font>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container margin-left: 10px">
+      <details>
+        <summary>
+          <font
+            color="#F6EAD5"
+            face="Comic Sans"
+            size="5"
+            style="font-weight: bold"
+
+            >Биография: детство, образование.
+          </font>
+
+        </summary>
+        <p style="margin-left: 10px;"
+          
+          class="lead text-muted"
+        >
+          <font color="#F6EAD5" face="TIMES" size="3" style=".text-block">
+            Дмитрий — 17-й ребенок в семье Менделеевых. Отец — Иван Павлович —
+            руководил гимназией в Тобольске. Мать — Мария Дмитриевна — посвятила
+            себя дому и детям. Дата рождения Менделеева — 27 января 1834 года. В
+            тот же год отец потерял зрение, вскоре ушел в отставку. В 10 лет
+            Дмитрий потерял отца, все заботы о семье легли на материнские плечи.
+            Она стала управлять стекольной фабрикой брата, который жил в Москве.
+            Фабрика едва давала средства для пропитания. Менделеев в детстве не
+            очень преуспевал в учебе, в гимназии его интересовали только
+            математика и физика. Но мать видела особую одаренность младшего
+            сына, поэтому после гимназии нацелила его на получение высшего
+            образования. Средства для этого она нашла, ликвидировав предприятие.
+            Через несколько недель после зачисления сына в вуз она умерла. В 21
+            год молодой человек оканчивает с особым отличием (золотой медалью)
+            Главный педагогический институт в Санкт-Петербурге, недолго
+            преподает в учебных заведениях Симферополя и Одессы. За это время
+            написал диссертацию, получил степень магистра и уже в 23 года стал
+            приват-доцентом столичного университета. <sup id="1" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></font
+          >
+        </p>
+      </details>
+      <details class="my-2">
+        <summary>
+          <font
+            color="#F6EAD5"
+            face="Comic Sans"
+            size="5"
+            style="font-weight: bold"
+            >Открытия, достижения</font
+          >
+        </summary>
+        <p style="margin-left: 10px;"
+          class="lead text-muted"
+        >
+          <font color="#F6EAD5" face="TIMES" size="3">
+            Среди самых известных открытий Менделеева — периодическая таблица химических элементов. 
+            Основная идея к 1869 году уже была сформирована Менделеевым, причём за довольно короткое время, но оформить её в какую-либо упорядоченную систему, наглядно отображающую, что к чему, он долго не мог. В одном из разговоров со своим соратником А. А. Иностранцевым он даже сказал, что в голове у него уже всё сложилось, но вот привести всё к таблице он не может. После этого, согласно данным биографов Менделеева, он приступил к кропотливой работе над своей таблицей, которая продолжалась трое суток без перерывов на сон. Перебирались всевозможные способы организации элементов в таблицу, а работа была осложнена ещё и тем, что в тот период наука знала ещё не обо всех химических элементах. Но, несмотря на это, таблица всё же была создана, а элементы систематизированы.
+            <li class="header__menu_list__first_li" style="margin-left: 10px;"</li> 
+            Химические элементы в таблице Д. И. Менделеева расположены по рядам, в соответствии с возрастанием их массы, а длина рядов подобрана так, чтобы находящиеся в них элементы имели схожие свойства. Например, благородные газы, такие как радон, ксенон, криптон, аргон, неон и гелий с трудом вступают в реакции с другими элементами, а также имеют низкую химическую активность, из-за чего расположены в крайнем правом столбце. А элементы левого столбца (калий, натрий, литий и т.д.) отлично реагируют с прочими элементами, а сами реакции носят взрывной характер. Говоря проще, внутри каждого столбца элементы имеют подобные свойства, варьирующиеся при переходе от одного столбца к другому. Все элементы, вплоть до №92 встречаются в природе, а с №93 начинаются искусственные элементы, которые могут быть созданы лишь в лабораторных условиях.
+
+В своём первоначальном варианте периодическая система понималась только как отражение существующего в природе порядка, и никаких объяснений, почему всё должно обстоять именно так, не было. И лишь когда появилась квантовая механика, истинный смысл порядка элементов в таблице стал понятен.<sup id="2" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>2<span class="cite-bracket">]</span></a></sup>
+          <font size=4 class="container my-5 text-center" <li> <li class="header__menu_list__first_li"></li>Другие достижения учёного:</li> </font>
+          <ul class="header__menu_list" style="margin-left: 10px;">
+            <li class="header__menu_list__first_li"></li>
+              <li >Исследование явлений изоморфизма, раскрывающих отношения между
+              кристаллической формой и химическим составом соединений
+            </li>
+            <li >
+              Открытие «температуры абсолютного кипения жидкостей» (критической
+              температуры)
+            </li>
+            <li>Создание гидратной теории растворов</li>
+            <li>
+              Развитие идей о существовании соединений переменного состава
+            </li>
+            <li>
+              Нахождение общего уравнения состояния идеального газа (уравнение
+              Клапейрона — Менделеева)
+            </li>
+            <li>
+              Выдвижение гипотезы происхождения нефти из карбидов тяжёлых
+              металлов
+            </li>
+            <li>Принципа дробной перегонки при переработке нефти</li>
+            <li>Выдвижение идеи подземной газификации углей.</li>
+            <li>
+              Менделеев оставил свыше 500 печатных трудов, среди которых
+              классический труд «Основы химии». <sup id="3" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>3<span class="cite-bracket">]</span></a></sup>
+            </li></font>
+          </ul>
+          >
+        </p>
+      </details>
+      <details>
+        <summary>
+          <font
+            color="#F6EAD5"
+            face="Comic Sans"
+            size="5"
+            style="font-weight: bold"
+            >Интересные факты
+          </font>
+        </summary>
+        <p style="margin-left: 10px;"
+          
+          class="lead text-muted"
+        >
+          <font color="#F6EAD5" face="TIMES" size="3" style=".text-block"> 
+            <li class="header__menu_list__first_li"> </li>
+            <p style="margin-left: 10px;">
+            Менделеев был удивительно разносторонним человеком. Он блестяще выполнял работу российского промышленного разведчика. 70-е годы XXI века называют расцветом нефтяной промышленности Соединенных Штатов. Американцам в то время удалось изобрести технологии, значительно удешевившие конечную стоимость нефтепродуктов. Российские промышленники, не имевшие возможности конкурировать с американцами, несли большие убытки.
+            </p>
+            <p style="margin-left: 10px;">
+            Министерство финансов, «Русское техническое общество», военное ведомство объединенными усилиями приняли решение отправить в США знаменитого химика. Здесь работала выставка технических новинок, которую он должен был детально изучить. Из-за океана великий ученый вернулся с новыми технологиями, с помощью которых американцы изготавливали керосин, прочие нефтепродукты. Энциклопедические знания профессора позволили быстро понять принцип изготовления дешевых и качественных нефтепродуктов. Методику изготовления бездымного пороха ученый позаимствовал у европейцев. Он заказал отчеты железнодорожных служб, с помощью которых удалось расшифровать новую технологию.
+          </p>
+ 
+            <p style="margin-left: 10px;">
+            Когда у профессора было свободное время, он сам шил себе одежду. но более всего ему нравилось изготавливать чемоданы.
+          </p>
+            <p style="margin-left: 10px;">
+            Часто Менделеева называют изобретателем водки и самогонного аппарата. Но это просто ничем не обоснованная легенда. Его научный труд, докторская диссертация имела название «Рассуждение о соединении спирта с водою», где ученый занимался изучением вопроса уменьшения объема смешиваемых жидкостей. В диссертации не удастся найти ни единого слова о водке. Что касается стандарта в 40 градусов, он был установлен в нашем отечестве в далеком 1843 году, когда знаменитый химик ходил в начальные классы гимназии.
+          </p>
+            <p style="margin-left: 10px;">
+            Еще одна знаменитая легенда о том, что свою систему химических элементов ученый увидел во сне, тоже является мистификацией. Эту красивую сказку придумал сам профессор. Идея о вещем сне пришла ученому в голову, когда ему наскучило давать подробный ответ на один и тот же вопрос обывателей.<sup id="4" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>4<span class="cite-bracket">]</span></a></sup>
+          </p>
+            </font
+          >
+        </p>
+      </details>
+        <details class="my-2">
+          <summary>
+            <font
+              color="#F6EAD5"
+              face="Comic Sans"
+              size="5"
+              style="font-weight: bold"
+              
+              >Смерть ученого
+            </font>
+          </summary>
+          <p style="margin-left: 10px;"
+            
+            class="lead text-muted"
+          >
+            <font color="#F6EAD5" face="TIMES" size="3" style=".text-block">
+              2 февраля (20 января по старому стилю) 1907 года Дмитрий Менделеев скончался в Петербурге от воспаления легких. Похоронен на Волковом кладбище.<sup id="5" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>5<span class="cite-bracket">]</span></a></sup></font 
+            >
+          </p>
+        </details>
+        <details class="my-2">
+          <summary>
+            <font
+              color="#F6EAD5"
+              face="Comic Sans"
+              size="5"
+              style="font-weight: bold"
+              >Галерея
+            </font>
+          </summary>
+          <div class="gallery">
+            <img src="DIMendeleevCab.jpg" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год" >
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год <sup id="6" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>6<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            <div class="gallery">
+            <img src="800px-MendeleevaMD.jpg" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год" >
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">Мария Дмитриевна Менделеева (урождённая Корнильева), мать. Неизвестный художник первой половины XIX века<sup id="7" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>7<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            <div class="gallery">
+            <img src="800px-MendeleevIP.jpg" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год" >
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">Иван Павлович Менделеев — отец Дмитрия Менделеева. Неизвестный художник 1-й половины XIX века<sup id="8" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>8<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            <div class="gallery">
+            <img src="1861._Портрет_Д.И._Менделеева.jpg" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год" >
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">С. Л. Левицкий. Д. И. Менделеев. 1861<sup id="9" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>9<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            <div class="gallery">
+            <img src="Могила_химика_Дмитрия_Менделеева.JPG.jpg" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год" >
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">Могила Менделеева на Волковском кладбище в Санкт-Петербурге<sup id="10" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>10<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            <div class="gallery">
+            <img src="Periodic_table_ru.svg.png" class="rounded-imgg" alt="Дмитрий Иванович Менделеев в своём кабинете (Главная палата мер и весов, Санкт-Петербург), 1897 год">
+            <figcaption style="font-style: italic; font-size: 5; color: #f6ead5;">Периодическая таблица химических элементов<sup id="11" class="reference"><a href="источники.html"><span class="cite-bracket">[</span>11<span class="cite-bracket">]</span></a></sup></figcaption></div>
+            </div>
+        </details>
+      <a href="#top" id="back-to-top" class="back-to-top" title="Back to top"
+        >▲</a
+      >
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTop = document.getElementById("back-to-top");
+
+        // Показать/скрыть кнопку при прокрутке страницы
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTop.style.display = "block";
+          } else {
+            backToTop.style.display = "none";
+          }
+        });
+
+        // Плавная прокрутка при клике на кнопку
+        backToTop.addEventListener("click", function (event) {
+          event.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
